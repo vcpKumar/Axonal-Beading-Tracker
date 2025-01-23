@@ -1,6 +1,6 @@
 # Semi-Automated Analysis of Beading in Degenerating Axons
 
-This code is associated with the paper titled **"Semi-automated analysis of beading in degenerating axons"**, produced as part of the research conducted at the **Cell Biophysics Lab** of the **Raman Research Institute**, Bangalore, India, under the guidance of **Prof. Pramod Pullarkat**.
+This code is associated with the paper titled **"Semi-automated analysis of beading in degenerating axons"**, produced as part of the research conducted at the **Cell Biophysics Lab** of the **Raman Research Institute**, Bangalore, India, under the guidance of **Prof. Pramod Pullarkat**. (The details of the paper will be added shortly)
 ## Overview
 
 The code is designed to track the onset of morphological changes, specifically the beading of axons, in a time series of images. This is achieved by measuring the diameter of the axon at each pixel along its medial axis. Peaks in the diameter indicate potential beading.
@@ -18,7 +18,7 @@ configuration_beading_onset.yaml
 ## Usage Instructions
 ### Running the Script
 **Execute the script:**     
-tracker_beading_onset.py
+Executing the scrit, tracker_beading_onset.py, initilizes the code. Make sure all three files are in same folder
 
 **Folder Selection:**   
 
