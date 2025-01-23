@@ -9,7 +9,7 @@ For each peak, the code performs a rigorous check to confirm it as a bead. For f
 ## Input and Configuration
 ### Input
 
-The input to the code is a time series of axon images.
+The input to the code is a folder with a time series of axon images.
 ### Configuration
 
 The analysis parameters can be customized in the configuration file:
@@ -18,7 +18,7 @@ configuration_beading_onset.yaml
 ## Usage Instructions
 ### Running the Script
 **Execute the script:**     
-Executing the scrit, tracker_beading_onset.py, initilizes the code. Make sure all three files are in same folder
+Executing the scrit, *_tracker_beading_onset.py_*, initializes the code. Make sure all three files are in same folder
 
 **Folder Selection:**   
 
