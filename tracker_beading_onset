@@ -216,18 +216,18 @@ try:
 
             # Increase the resolution for further processing
             cropShpHr = (
-                cropShape[0] * 3,
-                cropShape[1] * 3,
+                cropShape[0] * sclFact,
+                cropShape[1] * sclFact,
             )  # High-resolution shape
             rHr, cHr = cropShpHr
             maskHr = cv.resize(maskCrop, (cHr, rHr), cv.INTER_NEAREST)
             imHr = cv.resize(imCrop, (cHr, rHr), cv.INTER_CUBIC)
 
             # Scale coordinates to match the high resolution
-            x0Hr = 3 * x0
-            xnHr = 3 * xn
-            y0Hr = 3 * y0
-            ynHr = 3 * yn
+            x0Hr = sclFact * x0
+            xnHr = sclFact * xn
+            y0Hr = sclFact * y0
+            ynHr = sclFact * yn
 
             # %% Enhance contrast using the mask
             pixVals = imHr[
@@ -378,10 +378,10 @@ try:
 
         # Define the new cropping area for the next image
         cropBox1 = [
-            cropY + int(np.min(yFit) / 3),
-            cropY + int(np.max(yFit) / 3),
-            cropX + int(np.min(xFit) / 3),
-            cropX + int(np.max(xFit) / 3),
+            cropY + int(np.min(yFit) / sclFact),
+            cropY + int(np.max(yFit) / sclFact),
+            cropX + int(np.min(xFit) / sclFact),
+            cropX + int(np.max(xFit) / sclFact),
         ]
 
         # Update slopes for the next iteration
@@ -485,7 +485,7 @@ try:
                     # Annotate the bead position in the visual output
                     cv.circle(
                         imColorCrop,
-                        (int(pk_x / 3), int(pk_y / 3)),
+                        (int(pk_x / sclFact), int(pk_y / sclFact)),
                         10,
                         (0, 255, 255),
                         1,
@@ -493,7 +493,7 @@ try:
                     cv.putText(
                         imColorCrop,
                         str(dummyCord),
-                        (int(pk_x / 3 + 10), int(pk_y / 3 + 10)),
+                        (int(pk_x / sclFact + 10), int(pk_y / sclFact + 10)),
                         font,
                         fontScale,
                         (0, 255, 255),
@@ -575,7 +575,7 @@ try:
 
             # Create the title as an HTML string for display
             title_text = (
-                "<div style='text-align: center;'><h1>____________________________Frame No. = "
+                "<div style='text-align: center;'><h1>________________Frame No. = "
                 + str(k)
                 + "</h1></div>"
             )
