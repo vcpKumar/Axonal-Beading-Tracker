@@ -95,6 +95,8 @@ w1 = config["w1"]
 w2 = config["w2"]
 w3 = config["w3"]
 w4 = config["w4"]
+w4 = config["w4"]
+sclFact = config["sclFact"]
 
 # %% Structuring Elements for Morphological Filtering
 kd1 = disk(1)
@@ -1256,7 +1258,7 @@ def rigBeadAnal(
     # %% Find the contours of the bead
 
     # Apply Gaussian smoothing to the cropped bead region
-    beadCrop = cv.GaussianBlur(beadCrop, (17, 17), 3)
+    beadCrop = cv.GaussianBlur(beadCrop, (17, 17), sclFact)
 
     # Apply the Laplacian filter to detect edges
     laplcn = cv.Laplacian(beadCrop, cv.CV_32F, ksize=7)
