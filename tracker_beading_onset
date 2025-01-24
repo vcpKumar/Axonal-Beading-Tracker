@@ -46,7 +46,7 @@ file3 = open(
 
 # Write header information for bead parameters in file3
 print(
-    "\t \t (Bead Parameters in order coordinates), (high slope instance), (prominence), (width), (stdCentralPixels)",
+    "\t \t BEAD PARAMETERS: (coordinates), (highslp, highSlpInstances), (prominence), (width), (widthMax) || Next bead",
     file=file3,
 )
 
@@ -134,7 +134,7 @@ templEnd2 = zero255(imPad[dummy1[3] : dummy2[3], dummy1[2] : dummy2[2]])
 
 # %% Begin the iteration
 try:
-    for k in range(k_in, len(fileIds)):  # Iterate over the image series
+    for k in range(k_in, 40):#len(fileIds)):  # Iterate over the image series
         # %% Pre-process the loaded image
         # Set maximum function evaluations for curve fitting
         maxfev = 1000 if k == 0 else 100
@@ -575,7 +575,7 @@ try:
 
             # Create the title as an HTML string for display
             title_text = (
-                "<div style='text-align: center;'><h1>________________Frame No. = "
+                "<div style='text-align: center;'><h1>____________________________Frame No. = "
                 + str(k)
                 + "</h1></div>"
             )
