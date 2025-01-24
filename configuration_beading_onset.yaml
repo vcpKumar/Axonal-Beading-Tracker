@@ -1,7 +1,6 @@
 #   __________________________________________________________________
-# 	>>>>>>>>| CONFIGURATION PARAMETERS FOR BEADING ANALYSIS |<<<<<<<<<
+# 	>>>>>>>>| CONFIGURATION OF PARAMETERS FOR BEADING ANALYSIS |<<<<<<<<<
 #	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 
 # the path for saving output. #-->>|| NOTE: USE FORWARD SLASHES
 dstBasePath: '/mnt/W_D_Debian/py_Dst/500/op_' 
