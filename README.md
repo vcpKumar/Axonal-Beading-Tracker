@@ -1,11 +1,14 @@
 # Semi-Automated Analysis of Beading in Degenerating Axons
 
-This code is associated with the paper titled **"Semi-automated analysis of beading in degenerating axons"**, produced as part of the research conducted at the **Cell Biophysics Lab** of the **Raman Research Institute**, Bangalore, India, under the guidance of **Prof. Pramod Pullarkat**. (The details of the paper will be added shortly)
+This code performs semi-automated analysis of morphological changes occuring in axons of neuronal cells. The method is discussed in detail in the manuscript titled **"Semi-automated analysis of beading in degenerating axons"** (the details of the paper will be added shortly). This code was developed at the **Cell Biophysics Lab** of the **Raman Research Institute**, Bangalore by  **Dr. Pretheesh Kumar V C** and **Prof. Pramod Pullarkat**. This waork was funded by the Raman Research Institute and 
 ## Overview
 
-The code is designed to track the onset of morphological changes, specifically the beading of axons, in a time series of images. This is achieved by measuring the diameter of the axon at each pixel along its medial axis. Peaks in the diameter indicate potential beading.
+The code is designed to track the onset of morphological changes, specifically the beading of axons, in a time series of microscope images. Beading refers to a appearance of modulations in diameter (a series of swellings) along axons, which are tubular extension of neuronal cells. These modulations, which usually occur under diseased conditions, can be mimmicked in the lab using neuronal cultures. Investigations on the susceptibility of axons to undergo beading often requires analysing large numbers of video-microscopy recordings. Manual analysis becomes tediuos and becomes subjective. This code is desiged to overcome these issues. 
 
-For each peak, the code performs a rigorous check to confirm it as a bead. For further details on the methodology and validation, please refer to the associated paper.
+the detection of axonal beading is achieved by measuring the diameter of an axon along its medial axis. Peaks in the diameter indicate potential beading. The code determines the number and position of beads (swellings) along axons selected by the user. A set of criteria are defined within the code to accurately detect beads and to reject artefacts. The code operates in two steps. The code first detects potential beads and then performs a rigorous analysis subjected to these criteria to confirm axonal beading. 
+
+This code can also be applied to analyse diameters of ridge like structures (blood vessels, road networks, geographical features, etc). 
+
 ## Input and Configuration
 ### Input
 
