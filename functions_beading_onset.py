@@ -1338,7 +1338,7 @@ def rigBeadAnal(
     propsB = []  # To store bead properties
     if len(pks) == 0:
         print(
-            "\t \t No valid peak detected or multiple peaks with sufficient prominence.",
+            "\t \t No valid peak detected.",
             file=file,
         )
         return propsB, cnfmB
