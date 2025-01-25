@@ -3,7 +3,9 @@
 This code was written primarily for the semi-automated analysis of morphological changes occuring in axons of neuronal cells. The method is discussed in detail in the manuscript titled **"Semi-automated analysis of beading in degenerating axons"** (the details of the paper will be added shortly). This code was developed at the **Cell Biophysics Lab** of the **Raman Research Institute**, Bangalore by  **Dr. Pretheesh Kumar V C** and **Prof. Pramod Pullarkat**. This work was funded by the 'Raman Research Institute' and 'the Wellcome Trust DBT India Alliance (grant IA/TSG/20/1/600137)'. 
 ## Overview
 
-Primarily, the code is designed to track the onset of morphological changes, specifically the beading of axons, in a time series of microscope images. Beading refers to a appearance of modulations in diameter (a series of swellings) along axons. These modulations, which usually is a sign of axonal degeneration, can be mimmicked in the lab using neuronal cultures. This code is designed to overcome the subjectivity and reduce the human effort when analyzing large number of images. 
+Primarily, the code is designed to track the onset of morphological changes, specifically the beading of axons, in a time series of microscope images. Beading refers to a appearance of modulations in diameter (a series of swellings) along axons. These modulations, which usually is a sign of axonal degeneration, can be mimmicked in the lab using neuronal cultures. 
+
+*This code is designed to overcome the subjectivity and reduce the human effort when analyzing large number of images of beaded axons.* 
 
 The code determines the number and position of beads (swellings) along axons selected by the user.This is achieved by measuring the diameter of an axon along its medial axis. Peaks in the diameter indicate potential beading.  A set of criteria are defined within the code to accurately detect beads and to reject artefacts. 
 
