@@ -1,4 +1,4 @@
-# tool for precise estimation diameter of ridge like structures such as neurons, blood vessels, road networks and geographical features
+# tool for precise quantification diameter fluctuations of ridge like structures such as neurons, blood vessels, road networks and geographical features
 
 This code was written primarily for the semi-automated analysis of morphological changes occuring in axons of neuronal cells. The method is discussed in detail in the manuscript titled **"Semi-automated analysis of beading in degenerating axons"** (the details of the paper will be added shortly). This code was developed at the **Cell Biophysics Lab** of the **Raman Research Institute**, Bangalore by  **Pretheesh Kumar V C** and **Prof. Pramod Pullarkat**. This work was funded by the 'Raman Research Institute' and 'the Wellcome Trust DBT India Alliance (grant IA/TSG/20/1/600137)'. 
 ## Overview
