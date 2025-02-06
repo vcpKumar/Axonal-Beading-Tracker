@@ -1,0 +1,46 @@
+#   __________________________________________________________________
+# 	>>>>>>>>| CONFIGURATION PARAMETERS FOR BEADING ANALYSIS |<<<<<<<<<
+#	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+# the path for saving output. #-->>|| NOTE: USE FORWARD SLASHES
+dstBasePath: '/mnt/W_D_Debian/py_Dst/demo/op_' 
+#__________________________________________________
+# Enable operational details to be saved to the folder
+opDetails: true
+#_________________________________________________________
+# tanh decision function Refer to paper .........................
+p1: 4.5 # for prominence 
+p2: 6.5
+s1: 1.2 # slopes near the peaks
+s2: 0.9
+s3: 1.8
+s4: 1.4
+w1: 1.2 #width prominence criteria
+w2: 1.4
+w3: 1.4 # width widthMax
+w4: 1.8
+#____________________________________________________________________
+# The digiatal magnification to be used. If the diameter is less than 5 pixels
+# it would become deifficult for the programme to correctly measure
+sclFact: 3
+#_____________________________________________________________________________
+# The wavelet to be used for denoising.
+#    Any wavelets from pywavelets can be used. See the link below for details
+#   https://pywavelets.readthedocs.io/en/latest/ref/wavelets.html
+#   suggested ones are bior2.2, bior4.4, bior6.8, sym4, sym6,coif2
+
+wavelet: bior2.2
+wavLev: 3
+wavThld: 1.2
+# ____________________________________________
+# Padding value 
+padVal: 100 
+# Template size
+templSz: 70  
+# Template tolerance
+templTol: 20 
+# Cropping tolerance
+cropTol: 50 
+
+ 
