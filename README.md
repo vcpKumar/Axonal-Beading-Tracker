@@ -11,6 +11,16 @@ This tool iterates through a **time series of axonal images** treated with Vincr
 
 ---
 
+## **Authors & Acknowledgments**
+This project was developed by:
+
+- **Pretheesh Kumar V C**
+- **Pramod Pullarkat**  
+
+at the **Cell Biophysics Lab, Raman Research Institute (RRI), Bangalore, India**. We acknowledge the generous support from **The Wellcome Trust-DBT India Alliance** (Grant **IA/TSG/20/1/600137**) and **RRI**, which enabled the development of this research tool.
+
+---
+
 ## **File Structure**
 The repository contains the following key files:
 
@@ -40,7 +50,12 @@ The repository contains the following key files:
 
 ## **Output**
 - The script **automatically processes** the entire time series and generates **quantitative measurements** of axonal beading.  
-- The output files contain **detailed tracking results** for further analysis.
+- The output files contain **detailed tracking results** for further analysis.  
+- If the field `"opDetails"` in the **`configuration_beading_onset.yaml`** is set to `"true"`, the output folder will contain a **detailed result**. Otherwise, three key output files will be generated:
+  
+  1. **`Bead_Cords.txt`** - Contains the coordinates of detected beads in each frame.
+  2. **`Bead_Parameters.txt`** - Stores the features of all detected beads.
+  3. **`Rig_Bead.txt`** - Lists all suspected beads along with the reasons they were not classified as valid beads.
 
 ---
 
