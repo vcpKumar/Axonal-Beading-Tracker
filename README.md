@@ -1,4 +1,4 @@
-# **Semi-Automated Analysis of Beading in Degenerating Axons**
+# **Analysis of Spatial and Temporal Diameter Fluctuations in Degenerating Axons**
 
 Axonal beading, a shape change in axons resulting in a modulation of their diameter, is often associated with **axonal degeneration**. This repository provides a **Python-based tool** for studying axonal beading that occurs due to the **neurotoxic effects of chemotherapy drugs**, such as **Vincristine**.
 
