@@ -33,6 +33,9 @@ The repository contains the following key files:
 3. **`functions_beading_onset.py`**  
    - A script containing all the necessary **functions** used for tracking beading onset.
 
+4. **`100_nM_Vincristine/`**  
+   - A folder containing a set of **sample images** that can be used to run and test the code.
+
 ---
 
 ## **How to Run the Code**
