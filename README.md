@@ -35,7 +35,7 @@ The repository contains the following key files:
 
 4. **`100_nM_Vincristine/`**  
    - A folder containing a set of **sample images** that can be used to run and test the code.
-
+Full details of the algorithm can be found in the manuscript, https://doi.org/10.1101/2025.02.05.636573
 ---
 
 ## **How to Run the Code**
