@@ -29,7 +29,8 @@ from skimage.morphology import (
 
 from openpyxl import load_workbook
 from openpyxl.styles import PatternFill, Border, Side
-from PyQt5.QtWidgets import QApplication, QFileDialog
+import tkinter as tk
+from tkinter import filedialog 
 
 import time
 import copy
@@ -184,25 +185,23 @@ def deleteFolderContents(path):
 
 # %% Select Folder
 
-
-def selectFolder(prompt):
+def selectFolder(prompt="Select a folder"):
     """
-    Display a GUI prompt to select a folder and return its path.
+    Display a GUI prompt to select a folder and return its path using Tkinter.
 
     Parameters
     ----------
     prompt : str
-        Message displayed on the folder selection dialog.
+        Message displayed on the folder selection dialog (not directly used in Tkinter).
 
     Returns
     -------
     str or None
         Path of the selected folder, or None if no folder is selected.
     """
-    app = QApplication([])  # Initialize the application
-    folderPath = QFileDialog.getExistingDirectory(
-        None, prompt
-    )  # Open folder dialog
+    root = tk.Tk()
+    root.withdraw()  # Hide the root window
+    folderPath = filedialog.askdirectory(title=prompt)  # Open folder selection dialog
 
     if folderPath:
         print("Selected folder:", folderPath)
@@ -210,6 +209,32 @@ def selectFolder(prompt):
     else:
         print("No folder selected.")
         return None
+#
+# def selectFolder(prompt):
+#     """
+#     Display a GUI prompt to select a folder and return its path.
+
+#     Parameters
+#     ----------
+#     prompt : str
+#         Message displayed on the folder selection dialog.
+
+#     Returns
+#     -------
+#     str or None
+#         Path of the selected folder, or None if no folder is selected.
+#     """
+#     app = QApplication([])  # Initialize the application
+#     folderPath = QFileDialog.getExistingDirectory(
+#         None, prompt
+#     )  # Open folder dialog
+
+#     if folderPath:
+#         print("Selected folder:", folderPath)
+#         return folderPath
+#     else:
+#         print("No folder selected.")
+#         return None
 
 
 # %% Iterate Over Images
