@@ -4,7 +4,7 @@
 
 
 # the path for saving output. #-->>|| NOTE: USE FORWARD SLASHES
-dstBasePath: '/mnt/W_D_Debian/py_Dst/demo/op_' 
+dstBasePath: '/media/kumar/work/py_Dst/demo/op_' 
 #__________________________________________________
 # Enable operational details to be saved to the folder
 opDetails: true
