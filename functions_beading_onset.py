@@ -421,7 +421,7 @@ def templateMatch_angled(image, template):
 
     with ProcessPoolExecutor() as executor:
         futures = [
-            executor.submit(rotateNmatch, image, template, angle)
+            executor.submit(rotateNmatch, image, template, angle,templSz, templTol)
             for angle in angles
         ]
         bestMatch = None
@@ -435,33 +435,69 @@ def templateMatch_angled(image, template):
 
     return bestMatch  # Return best match coordinates
 
-
-def rotateNmatch(image, template, angle):
+def templateMatch_angled(image, template):
     """
-    Helper function for 'templateMatch_angled'.
-    Rotates the template by a given angle and performs template matching.
+    Perform template matching by rotating the template at specified angles.
+    Returns the best match location (top-left corner) in (x, y) format.
 
-    ----------------------- Parameters ---------------------------------
+    Parameters:
+    - image : np.ndarray (uint8), the image in which to search
+    - template : np.ndarray (uint8), the template to match
+    - templSz : int, template center for rotation
+    - templTol : int, pixels to trim after rotation
 
-    image : numpy.ndarray, uint8
-        The image in which to search.
-    template : numpy.ndarray, uint8
-        The template to match.
-    angle : int
-        The angle to rotate the template.
-
-    -------------------------- Returns ---------------------------------
-
-    tuple
-        The maximum value and location of the best match.
+    Returns:
+    - best_match : tuple (x, y), top-left location of best match
     """
+    angles = range(-6, 7, 2)
+    bestVal = -np.inf
+    bestMatch = None
+
     w, h = template.shape
-    M = cv.getRotationMatrix2D((templSz, templSz), angle, 1)
-    rotated_template = cv.warpAffine(template, M, (w, h))
-    rotated_template = rotated_template[templTol:-templTol, templTol:-templTol]
-    result = cv.matchTemplate(image, rotated_template, cv.TM_CCOEFF_NORMED)
-    minVal, maxVal, minLoc, maxLoc = cv.minMaxLoc(result)
-    return maxVal, maxLoc
+
+    for angle in angles:
+        # Rotate template
+        M = cv.getRotationMatrix2D((templSz, templSz), angle, 1)
+        rotated_template = cv.warpAffine(template, M, (w, h))
+        rotated_template = rotated_template[templTol:-templTol, templTol:-templTol]
+
+        # Match template
+        result = cv.matchTemplate(image, rotated_template, cv.TM_CCOEFF_NORMED)
+        _, maxVal, _, maxLoc = cv.minMaxLoc(result)
+
+        # Track best match
+        if maxVal > bestVal:
+            bestVal = maxVal
+            bestMatch = maxLoc
+
+    return bestMatch
+
+# def rotateNmatch(image, template, angle, templSz, templTol):
+    # """
+    # Helper function for 'templateMatch_angled'.
+    # Rotates the template by a given angle and performs template matching.
+
+    # ----------------------- Parameters ---------------------------------
+
+    # image : numpy.ndarray, uint8
+        # The image in which to search.
+    # template : numpy.ndarray, uint8
+        # The template to match.
+    # angle : int
+        # The angle to rotate the template.
+
+    # -------------------------- Returns ---------------------------------
+
+    # tuple
+        # The maximum value and location of the best match.
+    # """
+    # w, h = template.shape
+    # M = cv.getRotationMatrix2D((templSz, templSz), angle, 1)
+    # rotated_template = cv.warpAffine(template, M, (w, h))
+    # rotated_template = rotated_template[templTol:-templTol, templTol:-templTol]
+    # result = cv.matchTemplate(image, rotated_template, cv.TM_CCOEFF_NORMED)
+    # minVal, maxVal, minLoc, maxLoc = cv.minMaxLoc(result)
+    # return maxVal, maxLoc
 
 
 # %% Matched Coordinates

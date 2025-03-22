@@ -1,13 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Thu Mar 20 22:15:43 2025
-
-@author: kumar
-"""
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
 Created on Tue Jan 21 15:02:06 2025
 
 @author: PRETHEESH KUMAR V C 
@@ -15,11 +8,14 @@ Created on Tue Jan 21 15:02:06 2025
 
 from functions_beading_onset import *
 
-
 # %% Start the program
 # Prompt the user to select a folder containing the image series
-srcPath = selectFolder("Select the folder with the image series")
 
+# srcPath = selectFolder("Select the folder with the image series")
+# if srcPath is None:
+#     print("No folder selected. Exiting.")
+#     sys.exit(1)
+srcPath ="E:/git/Axonal-Beading-Tracker/100_nM_Vincristine"
 # Get file IDs by iterating over images in the selected folder
 fileIds = iterateOverImages(srcPath)
 
@@ -29,9 +25,10 @@ dstPath = dstBasePath
 k_in = 0
 
 # Ensure the base output directory does not already exist
+# Ensure the base output directory does not already exist
 counter = 2
 while os.path.exists(dstPath):
-    dstPath = f"/{dstBasePath}{counter:02d}"
+    dstPath = os.path.join(os.path.dirname(dstBasePath), f"{os.path.basename(dstBasePath)}{counter:02d}")
     counter += 1
 
 # Create the output directory
@@ -47,6 +44,7 @@ file1 = open(
 file2 = open(
     os.path.join(dstPath, "Bead_Cords.txt"), "w"
 )  # File for storing bead coordinates
+
 file3 = open(
     os.path.join(dstPath, "Bead_Parameters.txt"), "w"
 )  # File for bead parameters
@@ -140,7 +138,7 @@ templEnd2 = zero255(imPad[dummy1[3] : dummy2[3], dummy1[2] : dummy2[2]])
 
 # %% Begin the iteration
 try:
-    for k in range(k_in, 26):#len(fileIds)):  # Iterate over the image series
+    for k in range(k_in, 40):#len(fileIds)):  # Iterate over the image series
         # %% Pre-process the loaded image
         # Set maximum function evaluations for curve fitting
         maxfev = 1000 if k == 0 else 100
@@ -168,7 +166,7 @@ try:
             (padVal, padVal),
             mode="linear_ramp",
         )
-
+        
         # Convert the original image to color for visualization
         #imColor = cv.cvtColor(zero255(im), cv.COLOR_GRAY2BGR)
 
@@ -267,7 +265,7 @@ try:
             axonBin = cv.morphologyEx(
                 axonBin, cv.MORPH_CLOSE, kd5
             )  # Close gaps
-
+            
             # %% Remove regions thicker than 2x the diameter
             if k != k_in:  # Skip this step for the first image
                 axonBin1 = cv.morphologyEx(axonBin, cv.MORPH_CLOSE, kd20)
