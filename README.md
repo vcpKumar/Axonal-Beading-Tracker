@@ -4,19 +4,19 @@ Axonal beading, a shape change in axons resulting in a modulation of their diame
 
 This tool iterates through a **time series of axonal images** treated with Vincristine, identifying the **onset of beading**, which serves as a **marker for neurotoxicity**. Additionally, it provides **precise measurements** of various axonal metrics over time, including:
 
-- **Spatial and temporal fluctuations** of the axon during degeneration.  
-- **Evolution of axonal diameter** at the bead’s terminations.  
-- **Changes in bead diameter and prominence** over time.  
-- **Tracking the movement and merging of beads** along the axon.  
+- **Spatial and temporal fluctuations** of the axon during degeneration  
+- **Evolution of axonal diameter** at the bead’s terminations  
+- **Changes in bead diameter and prominence** over time  
+- **Tracking the movement and merging of beads** along the axon  
 
+Detailed description of the algorithm and implementation can be found in the manuscript: https://doi.org/10.1101/2025.02.05.636573
 
-Detailed desription of the algorithm and implementation can be found in the manuscript, https://doi.org/10.1101/2025.02.05.636573
 ---
 
 ## **Authors & Acknowledgments**
 This project was developed by:
 
-- **Pretheesh Kumar V C**
+- **Pretheesh Kumar V C**  
 - **Pramod Pullarkat**  
 
 at the **Cell Biophysics Lab, Raman Research Institute (RRI), Bangalore, India**. We acknowledge the generous support from **The Wellcome Trust-DBT India Alliance** (Grant **IA/TSG/20/1/600137**) and **RRI**, which enabled the development of this research tool.
@@ -24,7 +24,7 @@ at the **Cell Biophysics Lab, Raman Research Institute (RRI), Bangalore, India**
 ---
 
 ## **File Structure**
-The repository contains the following key files:
+The repository contains the following key files and folders:
 
 1. **`configuration_beading_onset.yaml`**  
    - A configuration file where parameters can be modified using any text editor.
@@ -38,9 +38,26 @@ The repository contains the following key files:
 4. **`100_nM_Vincristine/`**  
    - A folder containing a set of **sample images** that can be used to run and test the code.
 
+5. **`pyDst/`**  
+   - The **default output folder** where processed results will be saved.
+
+6. **`requirements.txt`**  
+   - A file listing all required packages. Use this to set up the environment:
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+> **Note**:  
+> - The code was developed using **Python 3.10.12** on **Linux** and **Python 3.10.11** on **Windows**.
+
 ---
 
 ## **How to Run the Code**
+1. **Set up the environment**:
+   ```bash
+   pip install -r requirements.txt
+
+
 1. **Run the main script**:
    ```bash
    python tracker_beading_onset.py
@@ -50,6 +67,11 @@ The repository contains the following key files:
    - Click **from one end to the other continuously** (without backtracking).
 4. **Press any key** to continue.
 5. The code will iterate through all images, and the results will be **stored** in the path specified by the `"dstPath"` field in the **`configuration_beading_onset.yaml`** file.
+
+> **Note:**  
+> Currently, the program directly accesses the image folder.  
+> To change this behavior and enable **interactive folder selection**,  
+> comment out **line 113** in `tracker_beading_onset.py` and **uncomment the next line**.
 
 ---
 
