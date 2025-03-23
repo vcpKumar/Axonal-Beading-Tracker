@@ -70,8 +70,11 @@ The repository contains the following key files and folders:
 
 > **Note:**  
 > Currently, the program directly accesses the image folder.  
-> To change this behavior and enable **interactive folder selection**,  
-> comment out **line 113** in `tracker_beading_onset.py` and **uncomment the next line**.
+> To change this behavior and enable **interactive folder selection**,  remove the line \
+>  `srcPath = "100_nM_Vincristine"` and replace it with  
+> `srcPath = selectFolder("Select the folder with the image series")`  
+> (this change is to be made around **line 15** in `tracker_beading_onset.py`).
+
 
 ---
 
