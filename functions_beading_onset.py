@@ -9,8 +9,7 @@ Created on Tue Jan 21 15:00:42 2025
 # %% Import Libraries
 import tkinter as tk
 from tkinter import filedialog
-from concurrent.futures import ProcessPoolExecutor
-from concurrent.futures import as_completed
+
 
 from scipy.stats import mode, trim1
 from scipy.signal import find_peaks, peak_widths, savgol_filter
@@ -21,7 +20,6 @@ from skimage.restoration import (
     denoise_wavelet,
     estimate_sigma,
 )
-from skimage.feature import hessian_matrix, hessian_matrix_eigvals
 from skimage.morphology import (
     disk,
     skeletonize,
@@ -29,8 +27,7 @@ from skimage.morphology import (
 
 from openpyxl import load_workbook
 from openpyxl.styles import PatternFill, Border, Side
-import tkinter as tk
-from tkinter import filedialog 
+
 
 import time
 import copy
@@ -39,7 +36,6 @@ import cv2 as cv
 import pywt
 import pandas as pd
 import math
-from itertools import combinations
 import os
 import shutil
 import yaml
@@ -108,8 +104,8 @@ kd7 = disk(7)
 kd20 = disk(20)
 
 # Create a Gaussian kernel for rigorous bead analysis
-kernelG = cv.getGaussianKernel(7, sigma=None, ktype=cv.CV_32F)
-kernelG = np.outer(kernelG, kernelG)
+kernelG = cv.getGaussianKernel(7, sigma=None, ktype=cv.CV_32F) # 1-D
+kernelG = np.outer(kernelG, kernelG) #2-D
 
 # %% Rescale Image Utilities
 

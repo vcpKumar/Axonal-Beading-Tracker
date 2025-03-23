@@ -15,7 +15,7 @@ from functions_beading_onset import *
 # if srcPath is None:
 #     print("No folder selected. Exiting.")
 #     sys.exit(1)
-srcPath ="E:/git/Axonal-Beading-Tracker/100_nM_Vincristine"
+srcPath ="100_nM_Vincristine"
 # Get file IDs by iterating over images in the selected folder
 fileIds = iterateOverImages(srcPath)
 
