@@ -3,7 +3,7 @@
 """
 Created on Tue Jan 21 15:02:06 2025
 
-@author: PRETHEESH KUMAR V C 
+@author: PRETHEESH KUMAR V C
 """
 
 from functions_beading_onset import *
@@ -15,7 +15,7 @@ from functions_beading_onset import *
 # if srcPath is None:
 #     print("No folder selected. Exiting.")
 #     sys.exit(1)
-srcPath ="100_nM_Vincristine"
+srcPath = "100_nM_Vincristine"
 # Get file IDs by iterating over images in the selected folder
 fileIds = iterateOverImages(srcPath)
 
@@ -28,7 +28,8 @@ k_in = 0
 # Ensure the base output directory does not already exist
 counter = 2
 while os.path.exists(dstPath):
-    dstPath = os.path.join(os.path.dirname(dstBasePath), f"{os.path.basename(dstBasePath)}{counter:02d}")
+    dstPath = os.path.join(os.path.dirname(dstBasePath),
+                           f"{os.path.basename(dstBasePath)}{counter:02d}")
     counter += 1
 
 # Create the output directory
@@ -133,12 +134,14 @@ dummy1 = axnEnds_pdd - templSz  # Start indices
 dummy2 = axnEnds_pdd + templSz + 1  # End indices
 
 # Extract templates for the axon ends
-templEnd1 = zero255(imPad[dummy1[1] : dummy2[1], dummy1[0] : dummy2[0]])
-templEnd2 = zero255(imPad[dummy1[3] : dummy2[3], dummy1[2] : dummy2[2]])
+templEnd1 = zero255(imPad[dummy1[1]: dummy2[1], dummy1[0]: dummy2[0]])
+templEnd2 = zero255(imPad[dummy1[3]: dummy2[3], dummy1[2]: dummy2[2]])
 
 # %% Begin the iteration
 try:
-    for k in range(k_in, 40):#len(fileIds)):  # Iterate over the image series
+    for k in range(
+            k_in,
+            40):  # len(fileIds)):  # Iterate over the image series
         # %% Pre-process the loaded image
         # Set maximum function evaluations for curve fitting
         maxfev = 1000 if k == 0 else 100
@@ -166,17 +169,17 @@ try:
             (padVal, padVal),
             mode="linear_ramp",
         )
-        
+
         # Convert the original image to color for visualization
-        #imColor = cv.cvtColor(zero255(im), cv.COLOR_GRAY2BGR)
+        # imColor = cv.cvtColor(zero255(im), cv.COLOR_GRAY2BGR)
 
         # %% Crop the ends of the axon (for template matching)
         # Define cropping indices for the ends of the axon
         dummy1 = axnEnds_pdd - padVal
         dummy2 = axnEnds_pdd + padVal
         # Crop regions around the axon ends
-        snipEnd1 = imPad[dummy1[1] : dummy2[1], dummy1[0] : dummy2[0]]
-        snipEnd2 = imPad[dummy1[3] : dummy2[3], dummy1[2] : dummy2[2]]
+        snipEnd1 = imPad[dummy1[1]: dummy2[1], dummy1[0]: dummy2[0]]
+        snipEnd2 = imPad[dummy1[3]: dummy2[3], dummy1[2]: dummy2[2]]
 
         # %% Perform multi-angle template matching
         # Match the first end of the axon
@@ -198,21 +201,23 @@ try:
         cordsEnd2 = cordsEnd2_pdd - padVal
 
         # %% Check axon tracking
-        # Verify if the endpoints found by template matching and curve fitting match
+        # Verify if the endpoints found by template matching and curve fitting
+        # match
         repeat_tracking = True
         while repeat_tracking:
             colEnd1, rowEnd1 = cordsEnd1  # Extract coordinates (x, y format)
             colEnd2, rowEnd2 = cordsEnd2
 
             # %% Crop the region of interest (ROI)
-            imCrop,  imColrCrop, maskCrop, cropShp, cropBox = cropping(
+            imCrop, imColrCrop, maskCrop, cropShp, cropBox = cropping(
                 imFilt, mask, cropBox1, h, w
             )
             hCrop, wCrop = cropShp
             cropY = cropBox[0]  # Start of the cropped region (y-coordinate)
             cropX = cropBox[2]  # Start of the cropped region (x-coordinate)
 
-            # Calculate the start and end points of the axon in the cropped image
+            # Calculate the start and end points of the axon in the cropped
+            # image
             y0 = rowEnd1 - cropY
             yn = rowEnd2 - cropY
             x0 = colEnd1 - cropX
@@ -265,7 +270,7 @@ try:
             axonBin = cv.morphologyEx(
                 axonBin, cv.MORPH_CLOSE, kd5
             )  # Close gaps
-            
+
             # %% Remove regions thicker than 2x the diameter
             if k != k_in:  # Skip this step for the first image
                 axonBin1 = cv.morphologyEx(axonBin, cv.MORPH_CLOSE, kd20)
@@ -278,7 +283,7 @@ try:
             # %% Skeletonize the binary axon image
             if k == k_in:  # For the first image, use the initial skeleton
                 dummy = skltnIni[
-                    cropBox[0] : cropBox[1], cropBox[2] : cropBox[3]
+                    cropBox[0]: cropBox[1], cropBox[2]: cropBox[3]
                 ]
                 skltn = cv.resize(
                     dummy.astype(np.uint8),
@@ -344,8 +349,8 @@ try:
         dummy2 = axnEnds_pdd + templSz + 1
 
         # Extract new templates for the axon ends
-        templEnd1 = imPad[dummy1[1] : dummy2[1], dummy1[0] : dummy2[0]]
-        templEnd2 = imPad[dummy1[3] : dummy2[3], dummy1[2] : dummy2[2]]
+        templEnd1 = imPad[dummy1[1]: dummy2[1], dummy1[0]: dummy2[0]]
+        templEnd2 = imPad[dummy1[3]: dummy2[3], dummy1[2]: dummy2[2]]
 
         # %% Generate the axon spine from curve-fitting results
         # Initialize an empty matrix for the spine
@@ -362,13 +367,14 @@ try:
         maskFine = cv.dilate(spine, disk(int(np.round(1.5 * dia))))
 
         # %% Mark the axon for visual display
-        # NOTE: This block is only for visualization and does not affect execution
+        # NOTE: This block is only for visualization and does not affect
+        # execution
         imColrCrop = cv.circle(
-             imColrCrop, (x0, y0), 5, color=(255, 0, 0), thickness=-1
-             )
+            imColrCrop, (x0, y0), 5, color=(255, 0, 0), thickness=-1
+        )
         imColrCrop = cv.circle(
-             imColrCrop, (xn, yn), 5, color=(255, 0, 0), thickness=-1
-             )
+            imColrCrop, (xn, yn), 5, color=(255, 0, 0), thickness=-1
+        )
 
         # %% Update the mask for the next iteration
         maskCrop = cv.resize(
@@ -378,7 +384,7 @@ try:
         )
         maskCrop = cv.dilate(maskCrop, kd5)
         mask = mask * 0
-        mask[cropBox[0] : cropBox[1], cropBox[2] : cropBox[3]] = maskCrop
+        mask[cropBox[0]: cropBox[1], cropBox[2]: cropBox[3]] = maskCrop
 
         # Define the new cropping area for the next image
         cropBox1 = [
@@ -413,14 +419,14 @@ try:
             .bfill()
             .to_numpy()
         )
-        #%%
-        
+        # %%
+        axLen = len(diasFilled)
 
         # %% Denoise the diameter array
         diasFilt = denoiseWavelet_1D(
             diasFilled, "coif4", thldFactor=1.5, level=3
         ).astype(np.float32)
-
+        diasFilt = diasFilt[0:axLen]
         # Calculate the gradient of the diameters
         gradient = np.gradient(diasFilt)
 
@@ -430,10 +436,9 @@ try:
         diaMode = mode(diasInt)[0].astype(np.float32)  # Mode of the diameters
         diasMode = dias[(dias > diaMode - 1.2) & (dias < diaMode + 1.5)]
         dia = np.round(np.mean(diasMode), decimals=2)
-        
-        
-        #%%
-       
+
+        # %%
+
         prominence = dia / 2.5  # Define prominence threshold
         pks, props = find_peaks(
             diasFilt,
@@ -448,7 +453,6 @@ try:
         )
 
         # Log basic information
-        axLen = len(diasFilt)
         n_pk = len(pks)
 
         # %% Append data to the result files
@@ -476,32 +480,32 @@ try:
                     # Define a wider region for bead analysis
                     width = int(2.4 * dia)
                     beadBin = axonBin[
-                        max(pk_y - width, 0) : min(pk_y + width, rHr),
-                        max(pk_x - width, 0) : min(pk_x + width, cHr),
+                        max(pk_y - width, 0): min(pk_y + width, rHr),
+                        max(pk_x - width, 0): min(pk_x + width, cHr),
                     ]
                     maskFineB = maskFine[
-                        max(pk_y - width, 0) : min(pk_y + width, rHr),
-                        max(pk_x - width, 0) : min(pk_x + width, cHr),
+                        max(pk_y - width, 0): min(pk_y + width, rHr),
+                        max(pk_x - width, 0): min(pk_x + width, cHr),
                     ]
                     beadCrop = zero255(
                         imHr[
-                            max(pk_y - width, 0) : min(pk_y + width, rHr),
-                            max(pk_x - width, 0) : min(pk_x + width, cHr),
+                            max(pk_y - width, 0): min(pk_y + width, rHr),
+                            max(pk_x - width, 0): min(pk_x + width, cHr),
                         ]
                     )
 
                     # Annotate the bead position in the visual output
                     cv.circle(
-                         imColrCrop,
+                        imColrCrop,
                         (int(pk_x / sclFact), int(pk_y / sclFact)),
                         10,
                         (0, 255, 255),
                         1,
                     )
                     cv.putText(
-                         imColrCrop,
+                        imColrCrop,
                         str(dummyCord),
-                        (int(pk_x / sclFact - 20), int(pk_y / sclFact -15)),
+                        (int(pk_x / sclFact - 20), int(pk_y / sclFact - 15)),
                         font,
                         0.45,
                         (0, 255, 255),
@@ -564,29 +568,30 @@ try:
         # %% Bokeh Plotting
         if opDetails:
             # Convert the cropped image to a format compatible with Bokeh
-            imColrCrop1 = image2BokehFormat( imColrCrop)
+            imColrCrop1 = image2BokehFormat(imColrCrop)
 
             # Initialize a blank array for overlaying edges and masks
             dummy = np.zeros(cropShpHr)
             edges1 = np.dstack((spine, edges, maskFine / 4))
 
-            # Create a mask for the background where all three channels are zero
+            # Create a mask for the background where all three channels are
+            # zero
             background_mask = (
                 (edges1[:, :, 0] == 0)
                 & (edges1[:, :, 1] == 0)
                 & (edges1[:, :, 2] == 0)
             )
 
-            # Set background pixels to a fixed value (e.g., 200 for visualization)
+            # Set background pixels to a fixed value (e.g., 200 for
+            # visualization)
             edges1[background_mask] = 200
             edges1 = image2BokehFormat(edges1)
 
             # Create the title as an HTML string for display
             title_text = (
-                "<div style='text-align: center;'><h1>____________________________Frame No. = "
-                + str(k)
-                + "</h1></div>"
-            )
+                "<div style='text-align: center;'><h1>____________________________Frame No. = " +
+                str(k) +
+                "</h1></div>")
             title_div = Div(text=title_text, width_policy="fit")
 
             # Add a divider at the bottom to display the source path
@@ -651,7 +656,7 @@ try:
                 match_aspect=True,
             )
             fig1.image_rgba(
-                image=[ imColrCrop1],
+                image=[imColrCrop1],
                 x=0,
                 y=0,
                 dw=cropShp[1],

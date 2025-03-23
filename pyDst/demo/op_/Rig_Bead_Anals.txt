@@ -1,0 +1,310 @@
+>> k = 0 	 dia = 16.0
+>> k = 1 	 dia = 16.0
+	 i=  0 (593, 366)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 4
+>> k = 2 	 dia = 16.9
+	 i=  0 (595, 364)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 2
+>> k = 3 	 dia = 17.1
+	 i=  0 (595, 364)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 2
+>> k = 4 	 dia = 17.3
+	 i=  0 (597, 363)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 2
+>> k = 5 	 dia = 17.3
+	 i=  0 (601, 362)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 15.47 9.83
+>> k = 6 	 dia = 17.4
+	 i=  0 (613, 363)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 15.15 9.74
+>> k = 7 	 dia = 17.5
+	 i=  0 (610, 361)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 14.41 9.84
+>> k = 8 	 dia = 17.4
+	 i=  0 (614, 361)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 15.63 9.91
+>> k = 9 	 dia = 17.3
+	 i=  0 (613, 361)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 3
+>> k = 10 	 dia = 17.3
+	 i=  0 (615, 360)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 14.61 9.89
+>> k = 11 	 dia = 17.4
+	 i=  0 (610, 361)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 16.45 9.84
+>> k = 12 	 dia = 17.3
+	 i=  1 (849, 256)  Initial slope = 0.00 	
+	 	 No valid peak detected or multiple peaks with sufficient prominence.
+>> k = 13 	 dia = 17.2
+	 i=  0 (605, 360)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 15.16 8.52
+	 i=  1 (803, 273)  Initial slope = 3.00 	
+	 	 Too many high slopes in bead analysis: 3
+	 i=  2 (838, 257)  Initial slope = 3.00 	
+	 	 No valid peak detected or multiple peaks with sufficient prominence.
+>> k = 14 	 dia = 17.2
+	 i=  0 (196, 516)  Initial slope = 0.00 	
+	 	 No valid peak detected or multiple peaks with sufficient prominence.
+	 i=  1 (341, 461)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.73
+>> k = 15 	 dia = 17.0
+	 i=  0 (336, 461)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.88
+	 i=  1 (599, 361)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.15
+>> k = 16 	 dia = 17.0
+	 i=  0 (338, 460)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.89
+	 i=  1 (419, 430)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.05
+	 i=  2 (596, 363)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.17
+>> k = 17 	 dia = 17.0
+	 i=  0 (421, 426)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.70
+	 i=  1 (593, 361)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.12
+>> k = 18 	 dia = 16.3
+	 i=  0 (327, 464)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.87
+	 i=  1 (420, 429)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.89
+	 i=  2 (595, 363)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.10
+>> k = 19 	 dia = 16.1
+	 i=  0 (333, 462)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.85
+	 i=  1 (418, 430)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.71
+	 i=  2 (593, 364)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.02
+>> k = 20 	 dia = 16.2
+	 i=  0 (334, 462)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.10
+	 i=  1 (423, 429)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.05
+	 i=  2 (487, 405)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.79
+	 i=  3 (592, 364)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.30
+>> k = 21 	 dia = 16.2
+	 i=  0 (234, 505)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.67
+	 i=  1 (332, 466)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.99
+	 i=  2 (424, 431)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 19.27 11.38
+	 i=  3 (592, 368)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 3
+>> k = 22 	 dia = 16.3
+	 i=  0 (329, 462)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.23
+	 i=  1 (421, 428)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.13
+	 i=  2 (591, 364)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.46
+>> k = 23 	 dia = 16.2
+	 i=  0 (230, 502)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.78
+	 i=  1 (327, 463)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.42
+	 i=  2 (419, 429)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 16.22 12.35
+	 i=  3 (589, 365)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 22.52 14.01
+	 i=  4 (773, 285)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.00
+>> k = 24 	 dia = 16.4
+	 i=  0 (329, 463)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 27.01 15.69
+	 i=  1 (424, 427)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.07
+	 i=  2 (592, 363)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 19.46 12.06
+	 i=  3 (766, 288)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.84
+>> k = 25 	 dia = 16.2
+	 i=  0 (323, 462)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.84
+	 i=  1 (421, 426)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 18.82 12.11
+	 i=  2 (585, 364)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 4
+	 i=  3 (762, 288)  Initial slope = 0.00 	
+	 	 No valid peak detected or multiple peaks with sufficient prominence.
+>> k = 26 	 dia = 16.0
+	 i=  0 (232, 501)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.79
+	 i=  1 (325, 463)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.13
+	 i=  2 (420, 428)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 18.62 12.11
+	 i=  3 (582, 366)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 4
+	 i=  4 (756, 292)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.94
+	 i=  5 (1031, 157)  Initial slope = 0.00 	
+	 	 No valid peak detected or multiple peaks with sufficient prominence.
+>> k = 27 	 dia = 16.1
+	 i=  0 (236, 497)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.65
+	 i=  1 (327, 461)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.13
+	 i=  2 (421, 426)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.95
+	 i=  3 (581, 365)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 5
+	 i=  4 (702, 314)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.85
+	 i=  5 (751, 292)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.00
+	 i=  6 (815, 262)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.70
+>> k = 28 	 dia = 15.1
+	 i=  0 (318, 455)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.97
+	 i=  1 (412, 420)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.00
+	 i=  2 (571, 359)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 20.86 17.22
+	 i=  3 (689, 310)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.83
+	 i=  4 (747, 284)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.00
+>> k = 29 	 dia = 16.1
+	 i=  0 (229, 493)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.91
+	 i=  1 (316, 458)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.29
+	 i=  2 (402, 426)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 19.57 11.87
+	 i=  3 (450, 408)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.83
+	 i=  4 (561, 366)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 4
+	 i=  5 (680, 316)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 13.84 8.56
+	 i=  6 (733, 292)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.85
+>> k = 30 	 dia = 16.9
+	 i=  0 (221, 493)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.90
+	 i=  1 (309, 458)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.32
+	 i=  2 (395, 426)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 21.45 15.26
+	 i=  3 (554, 365)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 5
+	 i=  4 (668, 317)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 11.56 10.13
+	 i=  5 (722, 293)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.38
+	 i=  6 (790, 261)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.99
+>> k = 31 	 dia = 16.3
+	 i=  0 (222, 490)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.85
+	 i=  1 (302, 457)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.08
+	 i=  2 (392, 424)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 19.39 12.79
+	 i=  3 (547, 365)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 6
+	 i=  4 (662, 317)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.86
+	 i=  5 (718, 292)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 2
+	 i=  6 (780, 263)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.10
+>> k = 32 	 dia = 16.2
+	 i=  0 (219, 489)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.88
+	 i=  1 (302, 456)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.88
+	 i=  2 (389, 423)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 21.15 12.32
+	 i=  3 (540, 366)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 21.5 19.51
+	 i=  4 (711, 292)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 2
+	 i=  5 (779, 261)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.87
+>> k = 33 	 dia = 16.3
+	 i=  0 (216, 492)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.88
+	 i=  1 (297, 458)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.94
+	 i=  2 (380, 427)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.18
+	 i=  3 (535, 368)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 3
+	 i=  4 (708, 294)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.93
+>> k = 34 	 dia = 16.3
+	 i=  0 (296, 454)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.98
+	 i=  1 (378, 423)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 23.65 13.83
+	 i=  2 (533, 365)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 3
+	 i=  3 (706, 291)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.98
+	 i=  4 (767, 262)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 17.73 10.71
+>> k = 35 	 dia = 16.2
+	 i=  0 (295, 453)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 21.89 13.33
+	 i=  1 (376, 423)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 22.17 13.56
+	 i=  2 (530, 365)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 7
+	 i=  3 (699, 292)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.09
+	 i=  4 (765, 261)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.09
+>> k = 36 	 dia = 16.8
+	 i=  0 (293, 454)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 23.83 13.62
+	 i=  1 (375, 423)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 24.35 14.81
+	 i=  2 (525, 365)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 8
+	 i=  3 (697, 292)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 23.27 13.89
+	 i=  4 (763, 261)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.16
+>> k = 37 	 dia = 15.2
+	 i=  0 (221, 484)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.17
+	 i=  1 (288, 457)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.97
+	 i=  2 (372, 425)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.02
+	 i=  3 (519, 369)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 3
+	 i=  4 (693, 295)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.44
+	 i=  5 (760, 264)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.91
+>> k = 38 	 dia = 17.0
+	 i=  0 (293, 459)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.34
+	 i=  1 (373, 429)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 3
+	 i=  2 (521, 371)  Initial slope = 3.00 	
+	 	 Too many high slopes in bead analysis: 8
+	 i=  3 (697, 298)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.30
+	 i=  4 (761, 268)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.36
+>> k = 39 	 dia = 15.3
+	 i=  0 (290, 462)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.25
+	 i=  1 (369, 432)  Initial slope = 0.00 	
+	 	 Width-prominence comparison failed. 21.42 15.0
+	 i=  2 (516, 375)  Initial slope = 0.00 	
+	 	 Too many high slopes in bead analysis: 6
+	 i=  3 (695, 299)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 1.48
+	 i=  4 (764, 267)  Initial slope = 0.00 	
+	 	 Bead confirmed with slope= 0.99
