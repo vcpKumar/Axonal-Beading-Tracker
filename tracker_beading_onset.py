@@ -9,13 +9,11 @@ Created on Tue Jan 21 15:02:06 2025
 from functions_beading_onset import *
 
 # %% Start the program
+
 # Prompt the user to select a folder containing the image series
 
-# srcPath = selectFolder("Select the folder with the image series")
-# if srcPath is None:
-#     print("No folder selected. Exiting.")
-#     sys.exit(1)
 srcPath = "100_nM_Vincristine"
+# srcPath = selectFolder("Select the folder with the image series")
 # Get file IDs by iterating over images in the selected folder
 fileIds = iterateOverImages(srcPath)
 
