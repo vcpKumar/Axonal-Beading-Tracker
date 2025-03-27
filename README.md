@@ -62,18 +62,26 @@ The repository contains the following key files and folders:
    ```bash
    python tracker_beading_onset.py
    ```
-2. **Select the folder** containing the image series when prompted.
-3. **Manually select an axon** in the displayed image window:
-   - Click **from one end to the other continuously** (without backtracking).
-4. **Press any key** to continue.
-5. The code will iterate through all images, and the results will be **stored** in the path specified by the `"dstPath"` field in the **`configuration_beading_onset.yaml`** file.
+2. **Selecting the Image Folder**
 
-> **Note:**  
-> Currently, the program directly accesses the image folder.  
-> To change this behavior and enable **interactive folder selection**,  remove the line \
->  `srcPath = "100_nM_Vincristine"` and replace it with  
-> `srcPath = selectFolder("Select the folder with the image series")`  
-> (this change is to be made around **line 15** in `tracker_beading_onset.py`).
+   Select the image folder when prompted.
+
+      > **Note:**\
+      > By default, the script uses a hardcoded path:   `srcPath = "100_nM_Vincristine"`  
+      > To enable **interactive folder selection**, replace it - around **line 15** in `tracker_beading_onset.py` -  with :  
+      > ```python
+      > srcPath = selectFolder("Select the folder with the image series")
+      > ```
+
+     
+
+4. **Manually select an axon** in the displayed image window:
+   - Click **from one end to the other continuously** (without backtracking).
+   - left click to add a point and right click to remove
+5. **Press any key** to continue.
+6. The code will iterate through all images, and the results will be **stored** in the path specified by the `"dstPath"` field in the **`configuration_beading_onset.yaml`** file.
+
+
 
 
 ---
