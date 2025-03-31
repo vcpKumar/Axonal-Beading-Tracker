@@ -1,0 +1,383 @@
+1
+00:00:01,331 --> 00:00:03,891
+Hello this is a demonstration of the code
+
+2
+00:00:03,891 --> 00:00:06,091
+shared on this GitHub repository.
+
+3
+00:00:07,899 --> 00:00:10,299
+I have already cloned the repository to
+
+4
+00:00:10,299 --> 00:00:12,979
+my local folder. Let's have a look at its
+
+5
+00:00:12,979 --> 00:00:13,859
+contents.
+
+6
+00:00:16,126 --> 00:00:18,206
+This is the folder containing the time
+
+7
+00:00:18,206 --> 00:00:21,126
+lapse images. I am using only 40
+
+8
+00:00:21,126 --> 00:00:22,566
+images for this demo.
+
+9
+00:00:25,790 --> 00:00:28,110
+And this is the destination folder.
+
+10
+00:00:28,470 --> 00:00:31,030
+Outputs from 2 previous analysis are
+
+11
+00:00:31,030 --> 00:00:31,990
+already here.
+
+12
+00:00:35,578 --> 00:00:38,418
+Let's move on to the next item, the YAML
+
+13
+00:00:38,418 --> 00:00:40,778
+file which is used to configure the code
+
+14
+00:00:40,778 --> 00:00:42,338
+for specific scenarios.
+
+15
+00:00:47,618 --> 00:00:49,738
+You can see the destination path here.
+
+16
+00:00:49,978 --> 00:00:51,818
+This is where the output files will be
+
+17
+00:00:51,858 --> 00:00:52,498
+saved.
+
+18
+00:00:54,700 --> 00:00:56,580
+If you need a detailed output of the
+
+19
+00:00:56,580 --> 00:00:59,540
+analysis, set this to true. There are
+
+20
+00:00:59,540 --> 00:01:01,820
+also several other parameters that can be
+
+21
+00:01:01,860 --> 00:01:04,580
+tuned. For details, please
+
+22
+00:01:04,580 --> 00:01:06,300
+refer to the paper cited in the
+
+23
+00:01:06,300 --> 00:01:07,220
+repository.
+
+24
+00:01:08,664 --> 00:01:11,064
+This file contains the functions called
+
+25
+00:01:11,064 --> 00:01:12,264
+by the main script.
+
+26
+00:01:14,424 --> 00:01:17,144
+Now let's take a look at the main script.
+
+27
+00:01:20,011 --> 00:01:22,251
+This is the path to the source directory
+
+28
+00:01:22,491 --> 00:01:24,611
+currently hard coded to this folder.
+
+29
+00:01:25,027 --> 00:01:27,107
+To select the source interactively,
+
+30
+00:01:27,387 --> 00:01:29,627
+enable this line and disable the above
+
+31
+00:01:29,627 --> 00:01:30,067
+one.
+
+32
+00:01:31,098 --> 00:01:33,498
+Lets go ahead and run the main script.
+
+33
+00:01:35,552 --> 00:01:38,072
+First I need to activate the virtual
+
+34
+00:01:38,072 --> 00:01:38,912
+environment.
+
+35
+00:01:41,056 --> 00:01:43,936
+Next I'll move to the clone directory and
+
+36
+00:01:43,936 --> 00:01:44,776
+run the script.
+
+37
+00:01:52,393 --> 00:01:54,993
+The initial "just in time " ompilation
+
+38
+00:01:55,033 --> 00:01:57,513
+using  "NUMBA" may take some time.
+
+39
+00:01:57,793 --> 00:02:00,433
+Meanwhile, let's open the destination
+
+40
+00:02:00,433 --> 00:02:00,993
+folder.
+
+41
+00:02:08,711 --> 00:02:11,151
+The compilation is now complete and the
+
+42
+00:02:11,151 --> 00:02:13,671
+code is prompting me to select an Axon.
+
+43
+00:02:14,446 --> 00:02:16,726
+I'm selecting this Axon using mouse
+
+44
+00:02:16,726 --> 00:02:19,726
+clicks. If needed you can right Click to
+
+45
+00:02:19,726 --> 00:02:21,646
+remove all selected points.
+
+46
+00:02:33,981 --> 00:02:36,661
+Now press any key to continue.
+
+47
+00:02:39,494 --> 00:02:41,094
+You can see that the code is now
+
+48
+00:02:41,094 --> 00:02:43,534
+iterating through all the images and a
+
+49
+00:02:43,534 --> 00:02:44,934
+new folder has appeared in the
+
+50
+00:02:44,934 --> 00:02:46,094
+destination path.
+
+51
+00:02:50,493 --> 00:02:53,415
+The script has finished execution. Let's
+
+52
+00:02:53,732 --> 00:02:56,052
+check the contents of the output folder.
+
+53
+00:02:58,890 --> 00:03:01,490
+You can find 3 dot txt
+
+54
+00:03:01,490 --> 00:03:04,330
+files here. Let's open the file BEAD
+
+55
+00:03:04,330 --> 00:03:06,010
+chords dot txt.
+
+56
+00:03:07,579 --> 00:03:09,139
+This shows the coordinates of the
+
+57
+00:03:09,139 --> 00:03:11,339
+confirmed beads in each frame for the
+
+58
+00:03:11,339 --> 00:03:14,219
+selected Axon. Here we can see that
+
+59
+00:03:14,219 --> 00:03:16,739
+beading has started from frame number 13
+
+60
+00:03:16,739 --> 00:03:17,459
+onwards.
+
+61
+00:03:18,654 --> 00:03:21,374
+Moving on to the file bead parameters, it
+
+62
+00:03:21,374 --> 00:03:23,654
+contains the details of all the suspected
+
+63
+00:03:23,654 --> 00:03:26,014
+beads that underwent rigorous analysis.
+
+64
+00:03:34,615 --> 00:03:37,175
+Now let's move to the file. Rigorous
+
+65
+00:03:37,175 --> 00:03:39,775
+speed analysis. For each
+
+66
+00:03:39,775 --> 00:03:42,095
+suspected bead, it confirms whether it
+
+67
+00:03:42,095 --> 00:03:44,575
+was identified as a bead or not, along
+
+68
+00:03:44,575 --> 00:03:46,335
+with the reason if it was rejected.
+
+69
+00:03:48,568 --> 00:03:51,048
+Now let's quickly see how these output
+
+70
+00:03:51,048 --> 00:03:53,128
+data and files can be utilised.
+
+71
+00:03:54,151 --> 00:03:56,871
+Consider frame number 15. The file
+
+72
+00:03:56,871 --> 00:03:58,991
+shows that 2 beads were detected.
+
+73
+00:04:08,823 --> 00:04:10,623
+This should be shown in the rigorous
+
+74
+00:04:10,623 --> 00:04:12,303
+speed analysis file.
+
+75
+00:04:18,269 --> 00:04:21,149
+Now let's view these beads labeled as I
+
+76
+00:04:21,149 --> 00:04:23,669
+equals zero and I equals one.
+
+77
+00:04:27,129 --> 00:04:29,169
+Both the cropped bead and its detected
+
+78
+00:04:29,169 --> 00:04:31,969
+edges, along with the masks used can be
+
+79
+00:04:31,969 --> 00:04:32,809
+seen here.
+
+80
+00:04:35,553 --> 00:04:37,793
+Now let's look at the case K equals
+
+81
+00:04:37,793 --> 00:04:40,793
+14 and I equals zero where
+
+82
+00:04:40,793 --> 00:04:42,673
+a structure was rejected to be a bead.
+
+83
+00:04:47,876 --> 00:04:49,956
+When you look at the edges it can be seen
+
+84
+00:04:49,956 --> 00:04:51,836
+that there is no bead like swelling on
+
+85
+00:04:51,836 --> 00:04:52,556
+the edges.
+
+86
+00:04:55,008 --> 00:04:56,688
+Also, for each frame there is an
+
+87
+00:04:56,688 --> 00:04:59,648
+interactive HTML file. The
+
+88
+00:04:59,648 --> 00:05:01,408
+user can interact with it, see the
+
+89
+00:05:01,408 --> 00:05:03,408
+coordinates of the features, zoom into
+
+90
+00:05:03,408 --> 00:05:05,168
+the edges, etcetera.
+
+91
+00:05:14,755 --> 00:05:16,595
+There is also a plot of the diameter
+
+92
+00:05:16,595 --> 00:05:18,955
+along the Axon which allows the user to
+
+93
+00:05:18,955 --> 00:05:21,435
+see the peaks, their coordinates and
+
+94
+00:05:21,435 --> 00:05:22,875
+other related details.
+
+95
+00:05:25,344 --> 00:05:28,264
+Hope you found this demo useful. Thanks
+
+96
+00:05:28,264 --> 00:05:29,104
+for watching.
