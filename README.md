@@ -66,21 +66,21 @@ The repository contains the following key files and folders:
 
    Select the image folder when prompted.
 
-      > **Note:**\
-      > By default, the script uses a hardcoded path:   `srcPath = "100_nM_Vincristine"`  
-      > To enable **interactive folder selection**, replace it - around **line 15** in `tracker_beading_onset.py` -  with :  
-      > ```python
-      > srcPath = selectFolder("Select the folder with the image series")
-      > ```
-
-     
-
+> **Note:**\
+> By default, the script uses a hardcoded path:   `srcPath = "100_nM_Vincristine"`  
+> To enable **interactive folder selection**, replace it - around **line 15** in `tracker_beading_onset.py` -  with :  
+> ```python
+> srcPath = selectFolder("Select the folder with the image series")
 4. **Manually select an axon** in the displayed image window:
    - Click **from one end to the other continuously** (without backtracking).
    - left click to add a point and right click to remove
 5. **Press any key** to continue.
 6. The code will iterate through all images, and the results will be **stored** in the path specified by the `"dstPath"` field in the **`configuration_beading_onset.yaml`** file.
-
+> **Note:**  
+> If you are using a **Windows N edition**, some required `.dll` files for **OpenCV** may be missing. To fix this:
+> 1. Go to **Settings → Apps → Optional Features → Add a feature**  
+> 2. Search for **Media Feature Pack** and install it  
+> 3. **Restart** your system
 
 
 
