@@ -48,7 +48,9 @@ The repository contains the following key files and folders:
      ```
 
 7. **`demo.mp4`**  
-   - A **video demonstration** showing how to use the code and interpret the results.
+- A **video demonstration** showing how to use the code and interpret the results.  
+  To watch on YouTube, click here: [https://www.youtube.com/watch?v=RCLlnnl7UCU&t=208s](https://www.youtube.com/watch?v=RCLlnnl7UCU&t=208s)
+
 
 
 > **Note**:  
