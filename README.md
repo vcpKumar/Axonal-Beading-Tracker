@@ -58,35 +58,50 @@ The repository contains the following key files and folders:
 
 ---
 
-## **How to Run the Code**
+## How to Run the Code
+
 1. **Set up the environment**:
+
    ```bash
    pip install -r requirements.txt
+   ```
+
+      > **Note**: `tkinter` may not be included by default in some Python installations.  
+      > On Debian/Ubuntu-based systems, install it with:  
+      > 
+      > ```bash
+      > sudo apt-get install python3-tk
+      > ```  
+      > 
+      > Modify the command as required for other Linux distributions.  
+      > On Windows, the best option is to reinstall Python using the official installer and ensure the "tcl/tk and IDLE" option is selected.
 
 
-1. **Run the main script**:
+
+
+2. **Run the main script**:
    ```bash
    python tracker_beading_onset.py
    ```
-2. **Selecting the Image Folder**
+3. **Selecting the Image Folder**
 
    Select the image folder when prompted.
 
-> **Note:**\
-> By default, the script uses a hardcoded path:   `srcPath = "100_nM_Vincristine"`  
-> To enable **interactive folder selection**, replace it - around **line 15** in `tracker_beading_onset.py` -  with :  
-> ```python
-> srcPath = selectFolder("Select the folder with the image series")
+      > **Note:**\
+      > By default, the script uses a hardcoded path:   `srcPath = "100_nM_Vincristine"`  
+      > To enable **interactive folder selection**, replace it - around **line 15** in `tracker_beading_onset.py` -  with :  
+      > ```python
+      > srcPath = selectFolder("Select the folder with the image series")
 4. **Manually select an axon** in the displayed image window:
    - Click **from one end to the other continuously** (without backtracking).
    - left click to add a point and right click to remove
 5. **Press any key** to continue.
 6. The code will iterate through all images, and the results will be **stored** in the path specified by the `"dstPath"` field in the **`configuration_beading_onset.yaml`** file.
-> **Note:**  
-> If you are using a **Windows N edition**, some required `.dll` files for **OpenCV** may be missing. To fix this:
-> 1. Go to **Settings → Apps → Optional Features → Add a feature**  
-> 2. Search for **Media Feature Pack** and install it  
-> 3. **Restart** your system
+      > **Note:**  
+      > If you are using a **Windows N edition**, some required `.dll` files for **OpenCV** may be missing. To fix this:
+      > 1. Go to **Settings → Apps → Optional Features → Add a feature**  
+      > 2. Search for **Media Feature Pack** and install it  
+      > 3. **Restart** your system
 
 
 
