@@ -9,7 +9,11 @@ This tool iterates through a **time series of axonal images** treated with Vincr
 - **Changes in bead diameter and prominence** over time  
 - **Tracking the movement and merging of beads** along the axon  
 
-Detailed description of the algorithm and implementation can be found in the manuscript: https://doi.org/10.1101/2025.02.05.636573
+Detailed description of the algorithm and implementation can be found in the manuscript: [https://doi.org/10.1101/2025.02.05.636573](https://doi.org/10.1101/2025.02.05.636573)
+Also in the published paper [https://doi.org/10.1007/s12021-025-09726-5](https://doi.org/10.1007/s12021-025-09726-5)
+
+rewrite
+
 
 ---
 
